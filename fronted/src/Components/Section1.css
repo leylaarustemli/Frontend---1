@@ -1,0 +1,47 @@
+.section1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+ height: 800px;
+    background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_2.jpg");
+    padding: 100px 0;
+    .container{
+        display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    .container{
+        position: relative;
+    }
+  p{
+    border: 1px solid white;
+    color: white;
+    padding: 13px 30px;
+    font-size: 18px;
+  }
+  h3{  
+      font-family: "Indie Flower", cursive;
+font-size: 72px;
+color: white;
+margin-top: 200px;}
+    }
+}
+
+.input,input{
+    background-color: #ffb400;
+   padding: 20px;
+  
+}
+.input{
+    display: flex;
+    gap: 13px;
+    padding:45px 20px;
+position: absolute;
+bottom: 145px;
+    button{
+        width: 100px;
+        border: none;
+    }
+}

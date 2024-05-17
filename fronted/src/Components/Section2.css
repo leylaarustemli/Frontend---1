@@ -1,0 +1,24 @@
+.section2 .container{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.right-sectn2 p{
+    color: #8b8b92;
+    margin-top:30px;
+  
+}
+.right-sectn2 span{
+
+        color: #cccccc;
+    
+}
+.right-sectn2 h3{
+margin-top: 20px;
+font-size: 26px;
+color: #404044;
+}
+.right-sectn2{
+    width: 450px;
+}
