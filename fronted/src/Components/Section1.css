@@ -2,7 +2,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
  height: 800px;
     background-image: url("https://preview.colorlib.com/theme/tasty/images/bg_2.jpg");
     padding: 100px 0;
@@ -39,7 +38,7 @@ margin-top: 200px;}
     gap: 13px;
     padding:45px 20px;
 position: absolute;
-bottom: 145px;
+bottom: -153px;
     button{
         width: 100px;
         border: none;

@@ -10,8 +10,8 @@ const Header = () => {
  </div>
  <div className="right-header">
   <ul>
-    <li>Home</li>
-    <li><Link to=".basket"><i class="fa-solid fa-basket-shopping"></i></Link></li>
+    <li > <Link to="/">Home</Link></li>
+    <li><Link to="/basket"><i class="fa-solid fa-basket-shopping"></i></Link></li>
     <li>Add</li>
   </ul>
  </div>

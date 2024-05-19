@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./Section3.css"
 import axios from "axios"
+import { Link } from 'react-router-dom';
+import MainContext from '../Context/Context';
 const Section3 = () => {
 const[data,setData]=useState([]);
+const{addToBasket}=useContext(MainContext)
 useEffect(()=>{
     axios.get("http://localhost:5505/api/products").then((res)=>{
-        setData(res.data);
+        setData([...res.data]);
     });
-},[]);
+},[data]);
 function filterData(category){
-    if(category=="menu"){
+    if(category=="main"){
         axios.get("http://localhost:5505/api/products").then((res)=>{
             setData([...res.data]);
     })}
@@ -20,27 +23,32 @@ function filterData(category){
         }
     }
 
+
+   
+
   return (
     <div className='section3'>
 <div className="container">
     <span>OUR MENU</span>
     <h3>Discover Our Exclusive Menu</h3>
     <div className="eats">
-        <div className="eat">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <p onClick={()=>{
-            filterData("menu");
-        }}>Main</p>
+        <div onClick={()=>{
+            filterData("main");
+        }} className="eat">
+        <i  class="fa-solid fa-cookie-bite"></i>
+        <p >Main</p>
         </div>
-        <div className="eat">
-        <i class="fa-solid fa-cookie-bite"></i>
-        <p onClick={()=>{
+        <div onClick={()=>{
             filterData("desert")
-        }}>Deserts</p>
-        </div>
-        <div className="eat">
+        }} className="eat">
         <i class="fa-solid fa-cookie-bite"></i>
-        <p>Drinks</p>
+        <p >Deserts</p>
+        </div>
+        <div onClick={()=>{
+            filterData("drinks")
+        }} className="eat">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <p >Drinks</p>
         </div>
     </div>
     <div className="cards">
@@ -55,8 +63,8 @@ function filterData(category){
             <div className="right-card">
                 <h4>{item.price}</h4>
             </div>
-            <button id='basket'>basket</button>
-            <button id='detail'>detail</button>
+            <button onClick={()=>addToBasket(item._id)} id='basket'>basket</button>
+            <Link to={`/detail/${item._id}`} id='detail'>detail</Link>
         </div>))}
         
     </div>

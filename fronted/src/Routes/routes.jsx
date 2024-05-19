@@ -16,7 +16,7 @@ children:[
         element:<Basket/>
     },
     {
-        path:"/detail",
+        path:"/detail/:id",
         element:<Detail/>
     }
    
